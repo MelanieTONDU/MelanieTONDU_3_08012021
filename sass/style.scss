@@ -1,0 +1,327 @@
+@import "variables";
+@import "footer";
+
+*{
+    font-family: $fonttext;
+    box-sizing: border-box; 
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loading{
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: $fond-grisclair;
+    z-index: 1;
+    animation: loading 0.1s;
+    animation-delay: 2.9s;
+    animation-fill-mode: both;
+    .spinner{
+        width: 80px;
+        height: 80px;
+        border-top: 7px solid $primaire;
+        border-bottom: 7px solid $secondaire;
+        border-radius: 50%;
+        border-left: 7px solid $tertiaire;
+        border-right: 7px solid $tertiaire;
+        animation: spinner 1.5s ;
+        animation-iteration-count: 3;
+
+    }
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.justify_center{
+    display: flex;
+    justify-content: center;
+}
+
+.align_center{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    padding: 25px;
+    box-shadow: 0px 3px 4px #cecece;
+    position: relative;
+}
+
+.lieu{
+    align-items: center;
+    font-size: 20px;
+    background-color: $fond-gris;
+    color: $grisfonce;
+    p{
+        padding-left: 20px;
+        font-weight: bold;
+    }
+}
+
+.reservez{
+    background-color: $fond-grisclair;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    h1{
+        font-size: 30px;
+        margin: 15px 40px 15px 40px;
+    }
+    p{
+        font-size: 23px;
+        margin:0 0 40px 0;
+    }
+}
+
+button{
+    color: white;
+    border-radius: 35px;
+    padding: 20px 10px 20px 10px;
+    background: linear-gradient(to bottom right,#FF79DA,#9356DC);
+    border: 0;
+    width: 65%;
+    font-size: 21px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.274);
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.541);
+        opacity: 0.9;
+    }
+}
+
+h2{
+    font-size: 30px;
+}
+
+aside{
+    margin: 55px 25px 70px 10px;
+    h2{
+        margin-left: 20px;
+    }
+}
+
+.fonctionnement1{
+    p{
+        background-color: $primaire;
+        color: white;
+        padding:7px  12px 7px 12px;
+        border-radius: 20px;
+        position: relative;
+        left: 15px;
+    }
+    h3{
+        font-size: 21px;
+    }
+}
+
+.fonctionnement{
+    margin: 20px 0 15px 0px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.123);
+    width: 100%;
+    height: 90px;
+    background-color: $fond-grisclair;
+    &:hover{
+        background-color: $primaire-claire;
+    }
+    i{
+        padding: 0 30px 0 43px;
+        font-size: 25px;}
+}
+
+.sans_couleur{
+    color: $grisfonce;
+}
+.couleur{
+    color: $primaire;
+}
+
+article{
+    background-color: $fond-grisclair;
+    padding: 45px 25px 80px 25px;
+    h3, p{
+        margin:0;
+    }
+    .restaurants_liste{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1360px;
+    }
+    .restaurant_lien{
+        background-color: white;
+        border-radius: 25px 25px 25px 25px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.123);
+    }
+}
+
+.image {
+    position: relative;
+}
+  
+.nouveau {
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    background-color: $tertiaire;
+    color: $tertiairefonce;
+    font-weight: bold;
+    padding: 8px 15px 8px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.image img{
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;}
+
+    .img2{
+        object-position: 50% 60%;
+    }
+    .img3{
+        object-position: 50% 80%; 
+    }
+    .img4{
+        object-position: 50% 80%;
+    }
+
+.restaurant_description{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+    p{
+        padding-top: 5px;
+        font-size: 22px;
+    }
+    .coeurplein{
+        visibility: hidden;
+    }
+    .coeur:hover{
+        display: none;
+        &:hover + .coeurplein{
+            visibility: visible;
+            background: -webkit-gradient(linear, left top, left bottom, from($secondaire), to($primaire));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:768px)
+{
+    button{
+        width: 40%;
+    }
+    aside{
+        margin-right: 15%;
+        margin-left: 15%;
+        h2{
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
+    .fonctionnement1 h3{
+        font-size: 27px;
+    }
+    .image {
+        .img2{
+            object-position: 50% 60%;
+        }
+        .img3{
+            object-position: 50% 70%; 
+        }
+        .img4{
+            object-position: 50% 80%;
+        }
+    }
+    
+}
+
+@media screen and (min-width:992px)
+{
+    button{
+        width: 30%;
+    }
+
+    aside{
+        margin: 50px;
+    }
+    .fonctionnement_liste{
+        display: flex;
+        justify-content: space-between;
+        .fonctionnement1{
+            width: 33%;
+        }
+    }
+
+    article {
+        width: 100%;
+        padding: 20px 70px 40px 70px;
+        .restaurants_liste{
+            flex-direction: row;
+            justify-content: space-between;
+            height: auto;
+            flex-wrap: wrap;
+        }
+        .restaurant_lien{
+            width: 48%;
+            margin-bottom: 50px;
+        }
+        .fa-heart{
+            font-size: 30px;
+        }
+    }
+
+    footer{
+        p{
+            text-align: center;
+            font-size: 35px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 100px;
+            text-align: center;
+            
+        }
+    }
+}

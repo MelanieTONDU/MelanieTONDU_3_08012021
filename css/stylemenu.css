@@ -1,0 +1,311 @@
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 30px 20px 25px 30px;
+}
+footer p {
+  font-family: "Shrikhand";
+  font-size: 23px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  padding-bottom: 10px;
+  font-size: 21px;
+}
+footer i {
+  font-size: 15px;
+  padding-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  footer p {
+    text-align: center;
+    font-size: 35px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+    text-align: center;
+  }
+}
+@keyframes mouvement {
+  0% {
+    opacity: 0;
+    transform: translateY(180px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  padding: 30px 25px 20px 25px;
+  align-items: center;
+}
+header img {
+  margin-left: auto;
+  margin-right: auto;
+}
+header i {
+  font-size: 23px;
+}
+header a {
+  color: #353535;
+}
+
+main img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.resto {
+  width: 100%;
+  position: relative;
+  margin-top: -4rem;
+  background-color: #f6f6f6;
+  border-radius: 50px 50px 0 0;
+  padding: 10px 20px 25px 20px;
+}
+.resto h1 {
+  font-family: "Shrikhand";
+  font-size: 38px;
+}
+.resto i {
+  font-size: 30px;
+}
+.resto h2 {
+  font-weight: normal;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+.resto span {
+  padding-bottom: 5px;
+  border-bottom: 4px #99F2D0 solid;
+}
+.resto .liste_plat {
+  margin-bottom: 50px;
+}
+
+.titre {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 30px 40px 0;
+  height: 50px;
+}
+.titre h1 {
+  margin-top: 0;
+}
+.titre i {
+  font-size: 35px;
+  padding-top: 10px;
+}
+.titre .coeurplein {
+  visibility: hidden;
+}
+.titre .coeur:hover {
+  display: none;
+}
+.titre .coeur:hover:hover + .coeurplein {
+  visibility: visible;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.liste_plat {
+  animation-name: mouvement;
+}
+
+#delai1 {
+  animation-duration: 3s;
+}
+
+#delai2 {
+  animation-duration: 4s;
+}
+
+.delai3 {
+  animation-duration: 5s;
+}
+
+.plat {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  height: 90px;
+  width: 100%;
+  margin-bottom: 18px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.103);
+  overflow: hidden;
+  cursor: pointer;
+}
+.plat .description {
+  width: 90%;
+  height: 90px;
+  overflow: hidden;
+  padding: 15px 0px 15px 20px;
+  font-size: 20px;
+}
+.plat .description p {
+  margin: 0;
+}
+.plat h3 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+  height: 30px;
+}
+.plat .prix {
+  width: 50px;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 10px 0 10px;
+}
+.plat .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0%;
+  background-color: #99F2D0;
+  transition-duration: 0.8s;
+  transform: translateX(80px);
+  transition: 0.8s;
+  transform-origin: 100% 50%;
+}
+.plat i {
+  color: white;
+}
+
+.plat:hover .check {
+  width: 15%;
+  transform: translateX(0px);
+  transition-duration: 0.5s;
+}
+
+.plat:hover .description {
+  width: 85%;
+  transition-duration: 0.5s;
+}
+
+.plat:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.description > * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+button {
+  color: white;
+  border-radius: 35px;
+  padding: 20px 10px 20px 10px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: 0;
+  width: 56%;
+  font-size: 21px;
+  margin: 17px 0 47px 0;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.274);
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.541);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 30px 20px 25px 30px;
+}
+footer p {
+  font-family: "Shrikhand";
+  font-size: 23px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  padding-bottom: 10px;
+  font-size: 21px;
+}
+footer i {
+  font-size: 15px;
+  padding-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .resto {
+    padding: 10px 50px 25px 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .resto {
+    padding: 10px 65px 25px 65px;
+  }
+  main img {
+    object-position: 50% 63%;
+  }
+
+  .categorie {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .titre {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .liste_plat {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 20%;
+  }
+}
+
+/*# sourceMappingURL=stylemenu.css.map */
