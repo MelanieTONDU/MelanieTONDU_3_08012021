@@ -1,0 +1,23 @@
+.coeur{
+    position: relative;
+    margin-right: 20px;
+    i{
+        position: absolute;
+        font-size: 25px;
+    }
+    .coeurplein{
+        opacity: 0;
+        transition-duration: 0.5s;
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }    
+    &:hover .coeurvide {
+        transition-duration: 0.5s;
+        opacity: 0;
+    }
+    &:hover .coeurplein{
+        transition-duration: 0.5s;
+        opacity: 1;
+    }
+}

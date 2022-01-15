@@ -41,6 +41,30 @@ footer a {
     text-align: center;
   }
 }
+.coeur {
+  position: relative;
+  margin-right: 20px;
+}
+.coeur i {
+  position: absolute;
+  font-size: 25px;
+}
+.coeur .coeurplein {
+  opacity: 0;
+  transition-duration: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.coeur:hover .coeurvide {
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+.coeur:hover .coeurplein {
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+
 @keyframes mouvement {
   0% {
     opacity: 0;
@@ -105,18 +129,6 @@ main img {
 .resto i {
   font-size: 35px;
   padding-top: 10px;
-}
-.resto .coeurplein {
-  visibility: hidden;
-}
-.resto .coeur:hover {
-  display: none;
-}
-.resto .coeur:hover:hover + .coeurplein {
-  visibility: visible;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .resto h2 {
   font-weight: normal;

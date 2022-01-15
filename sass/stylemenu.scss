@@ -1,5 +1,6 @@
 @import "variables";
 @import "footer";
+@import "coeur";
 
 @keyframes mouvement{
     0%{
@@ -66,18 +67,6 @@ main {
     i{
         font-size: 35px;
         padding-top: 10px;
-    }
-    .coeurplein{
-        visibility: hidden;
-    }
-    .coeur:hover{
-        display: none;
-        &:hover + .coeurplein{
-            visibility: visible;
-            background: -webkit-gradient(linear, left top, left bottom, from($secondaire), to($primaire));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     }
     h2{
         font-weight: normal;
