@@ -119,10 +119,11 @@ main img {
   display: flex;
   justify-content: space-between;
   margin: 40px 30px 40px 0;
-  height: 50px;
+  height: 80px;
 }
 .titre h1 {
   margin-top: 0;
+  padding-right: 5px;
 }
 .titre i {
   font-size: 35px;
@@ -244,35 +245,6 @@ button:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.541);
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-  padding: 30px 20px 25px 30px;
-}
-footer p {
-  font-family: "Shrikhand";
-  font-size: 23px;
-  margin: 0;
-  padding-bottom: 20px;
-}
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-footer li {
-  padding-bottom: 10px;
-  font-size: 21px;
-}
-footer i {
-  font-size: 15px;
-  padding-right: 10px;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
 @media screen and (min-width: 768px) {
   .resto {
     padding: 10px 50px 25px 50px;
@@ -295,6 +267,7 @@ footer a {
   .titre {
     justify-content: center;
     gap: 60px;
+    height: 50px;
   }
 
   .liste_plat {
