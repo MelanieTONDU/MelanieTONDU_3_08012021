@@ -56,11 +56,6 @@ footer a {
   box-sizing: border-box;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-}
-
 body {
   margin: 0;
 }
@@ -95,12 +90,33 @@ main img {
   border-radius: 50px 50px 0 0;
   padding: 10px 20px 25px 20px;
 }
+.resto .titre {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 30px 40px 0;
+  height: 80px;
+}
 .resto h1 {
   font-family: "Shrikhand";
   font-size: 38px;
+  margin-top: 0;
+  padding-right: 5px;
 }
 .resto i {
-  font-size: 30px;
+  font-size: 35px;
+  padding-top: 10px;
+}
+.resto .coeurplein {
+  visibility: hidden;
+}
+.resto .coeur:hover {
+  display: none;
+}
+.resto .coeur:hover:hover + .coeurplein {
+  visibility: visible;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .resto h2 {
   font-weight: normal;
@@ -113,36 +129,6 @@ main img {
 }
 .resto .liste_plat {
   margin-bottom: 50px;
-}
-
-.titre {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 30px 40px 0;
-  height: 80px;
-}
-.titre h1 {
-  margin-top: 0;
-  padding-right: 5px;
-}
-.titre i {
-  font-size: 35px;
-  padding-top: 10px;
-}
-.titre .coeurplein {
-  visibility: hidden;
-}
-.titre .coeur:hover {
-  display: none;
-}
-.titre .coeur:hover:hover + .coeurplein {
-  visibility: visible;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.liste_plat {
   animation-name: mouvement;
 }
 
@@ -205,18 +191,15 @@ main img {
 .plat i {
   color: white;
 }
-
 .plat:hover .check {
   width: 15%;
   transform: translateX(0px);
   transition-duration: 0.5s;
 }
-
 .plat:hover .description {
   width: 85%;
   transition-duration: 0.5s;
 }
-
 .plat:hover i {
   transform: rotate(360deg);
   transition-duration: 0.5s;
@@ -226,6 +209,11 @@ main img {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -245,38 +233,37 @@ button:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.541);
 }
 
+/*TABLETTE*/
 @media screen and (min-width: 768px) {
   .resto {
     padding: 10px 50px 25px 50px;
   }
 }
+/*DESKTOP*/
 @media screen and (min-width: 992px) {
   main .resto {
     padding: 10px 65px 25px 65px;
   }
-  main img {
-    object-position: 50% 63%;
-  }
-
-  .categorie {
+  main .resto .titre {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .titre {
     justify-content: center;
     gap: 60px;
     height: 50px;
   }
-
-  .liste_plat {
+  main img {
+    object-position: 50% 63%;
+  }
+  main .categorie {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  main .liste_plat {
     width: 30%;
     display: flex;
     flex-direction: column;
   }
-
-  button {
+  main button {
     width: 20%;
   }
 }

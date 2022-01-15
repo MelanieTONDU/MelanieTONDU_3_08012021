@@ -163,7 +163,7 @@ aside h2 {
   margin-left: 20px;
 }
 
-.fonctionnement1 p {
+.fonctionnement p {
   background-color: #9356DC;
   color: white;
   padding: 7px 12px 7px 12px;
@@ -171,11 +171,11 @@ aside h2 {
   position: relative;
   left: 15px;
 }
-.fonctionnement1 h3 {
+.fonctionnement h3 {
   font-size: 21px;
 }
 
-.fonctionnement {
+.fonctionnement_text {
   margin: 20px 0 15px 0px;
   border-radius: 25px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.123);
@@ -183,19 +183,17 @@ aside h2 {
   height: 90px;
   background-color: #f6f6f6;
 }
-.fonctionnement:hover {
-  background-color: #f5edff;
-}
-.fonctionnement i {
+.fonctionnement_text i {
   padding: 0 30px 0 43px;
   font-size: 25px;
 }
-
-.sans_couleur {
+.fonctionnement_text .couleur {
   color: #353535;
 }
-
-.couleur {
+.fonctionnement_text:hover {
+  background-color: #f5edff;
+}
+.fonctionnement_text:hover .couleur {
   color: #9356DC;
 }
 
@@ -220,12 +218,25 @@ article .restaurant_lien {
 article .restaurant_lien:hover {
   box-shadow: 0px 0px 15px #9356DC;
 }
-
-.image {
+article .image {
   position: relative;
 }
-
-.nouveau {
+article .image img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+article .image .img2 {
+  object-position: 50% 60%;
+}
+article .image .img3 {
+  object-position: 50% 80%;
+}
+article .image .img4 {
+  object-position: 50% 80%;
+}
+article .nouveau {
   position: absolute;
   top: 7%;
   right: 4%;
@@ -235,25 +246,6 @@ article .restaurant_lien:hover {
   padding: 8px 15px 8px 15px;
   font-size: 18px;
   border-radius: 4px;
-}
-
-.image img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 25px 25px 0 0;
-}
-
-.img2 {
-  object-position: 50% 60%;
-}
-
-.img3 {
-  object-position: 50% 80%;
-}
-
-.img4 {
-  object-position: 50% 80%;
 }
 
 .restaurant_description {
@@ -285,6 +277,7 @@ a {
   text-decoration: none;
 }
 
+/*TABLETTE*/
 @media screen and (min-width: 768px) {
   button {
     width: 40%;
@@ -299,7 +292,7 @@ a {
     font-size: 40px;
   }
 
-  .fonctionnement1 h3 {
+  .fonctionnement h3 {
     font-size: 27px;
   }
 
@@ -313,6 +306,7 @@ a {
     object-position: 50% 80%;
   }
 }
+/*DESKTOP*/
 @media screen and (min-width: 992px) {
   button {
     width: 30%;
@@ -326,7 +320,7 @@ a {
     display: flex;
     justify-content: space-between;
   }
-  .fonctionnement_liste .fonctionnement1 {
+  .fonctionnement_liste .fonctionnement {
     width: 33%;
   }
 
