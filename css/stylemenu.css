@@ -167,6 +167,11 @@ main img {
   overflow: hidden;
   cursor: pointer;
 }
+.plat h3 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+  height: 30px;
+}
 .plat .description {
   width: 90%;
   height: 90px;
@@ -177,13 +182,8 @@ main img {
 .plat .description p {
   margin: 0;
 }
-.plat h3 {
-  margin: 0 0 5px 0;
-  font-size: 24px;
-  height: 30px;
-}
 .plat .prix {
-  width: 50px;
+  width: 10%;
   overflow: hidden;
   font-size: 20px;
   font-weight: bold;
@@ -195,17 +195,13 @@ main img {
   justify-content: center;
   width: 0%;
   background-color: #99F2D0;
-  transition-duration: 0.8s;
-  transform: translateX(80px);
-  transition: 0.8s;
-  transform-origin: 100% 50%;
+  transition: 0.5s;
 }
 .plat i {
   color: white;
 }
 .plat:hover .check {
   width: 15%;
-  transform: translateX(0px);
   transition-duration: 0.5s;
 }
 .plat:hover .description {
