@@ -43,7 +43,7 @@ footer a {
 }
 .coeur {
   position: relative;
-  margin-right: 20px;
+  margin-right: 2%;
 }
 .coeur i {
   position: absolute;
@@ -125,6 +125,7 @@ main img {
   font-size: 38px;
   margin-top: 0;
   padding-right: 5px;
+  width: 90%;
 }
 .resto i {
   font-size: 35px;
@@ -172,7 +173,7 @@ main img {
   height: 30px;
 }
 .plat .description {
-  width: 90%;
+  width: 80%;
   height: 90px;
   overflow: hidden;
   padding: 15px 0px 15px 20px;
@@ -182,7 +183,7 @@ main img {
   margin: 0;
 }
 .plat .prix {
-  width: 10%;
+  width: 20%;
   overflow: hidden;
   font-size: 20px;
   font-weight: bold;
@@ -269,6 +270,12 @@ button:hover {
     width: 30%;
     display: flex;
     flex-direction: column;
+  }
+  main .liste_plat .description {
+    width: 90%;
+  }
+  main .liste_plat .prix {
+    width: 10%;
   }
   main button {
     width: 20%;
