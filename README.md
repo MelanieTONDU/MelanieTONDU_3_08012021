@@ -3,7 +3,7 @@
 ### **À propos :**
 
 La réalisation frontend du site OhMyFood est le 3ième projet pour la formation de développeur web chez OpenClassrooms.
-
+Vous pouvez consulter le résultat de mon travail ici : https://melanietondu.github.io/Projet-3/
 
 ### **Contenue du site :**
 - Une page d'accueil
@@ -25,4 +25,5 @@ La réalisation frontend du site OhMyFood est le 3ième projet pour la formation
   - Mettre en place une structure de navigation pour un site web
 
 
-Vous pouvez consulter le site ici : https://melanietondu.github.io/Projet-3/
+
+
